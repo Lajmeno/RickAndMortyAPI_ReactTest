@@ -1,12 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import GalleryItem from './GalleryItem';
-import Gallery from './Gallery';
+import GalleryItem from './GaleryItem/GalleryItem';
+import Gallery from './Gallery/Gallery';
 
 function App() {
   return (
-    <div > 
+    <div> 
       <Gallery />
       </div>
   );

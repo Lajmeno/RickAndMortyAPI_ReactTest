@@ -1,0 +1,22 @@
+.galleryMain{
+    display: grid;
+    grid-template-rows: 5% 90%;
+}
+.gallarySearchBar{
+    grid-row: 1 / 1;
+    width: min-content;
+    align-items: center;
+}
+.gallarySearchInput {
+    align-self: center;
+}
+
+
+.gallary{
+    grid-row: 2 / 2;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+
+    column-gap: 10px;
+    row-gap: 100px;
+}

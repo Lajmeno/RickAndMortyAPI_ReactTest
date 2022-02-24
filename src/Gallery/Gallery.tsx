@@ -1,18 +1,34 @@
-import GalleryItem from "./GalleryItem";
+import { useState } from "react";
+import GalleryItem from "../GaleryItem/GalleryItem";
 
+import './Gallery.css';
 
 export default function Gallery(){
 
+    const [searchItem, setSearchItem] = useState("");
+
     const characters = apiJSON.results
+    .filter(ele => ele.name.toLowerCase().includes(searchItem.toLowerCase()))
     .map(vals => ({name: vals.name, species: vals.species, origin: vals.origin.name, image: vals.image}))
     .map(element => <GalleryItem key={element.name} character={element}/>);
 
     return(
-        <div >
-            {characters}
+        <div className="galleryMain">
+            <div className="gallerysSearchBar">
+            <input className="gallerySearchInput" placeholder="Search Character" value={searchItem} onChange ={v => setSearchItem(v.target.value)}></input>
+
+            </div>
+
+            <div className= "gallary" >
+                {characters}
+            </div>
+
         </div>
+        
     )
 }
+
+
 
 
 
