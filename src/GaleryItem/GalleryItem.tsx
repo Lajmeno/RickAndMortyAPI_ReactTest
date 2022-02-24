@@ -12,8 +12,8 @@ export default function GalleryItem(props: GalleryItemProps){
         <div className="item">
             <img className="item-img" src={props.character.image} alt="character-image" />
             <div>{props.character.name}</div>
-            <p>{props.character.origin}</p>
             <p>{props.character.species}</p>
+            <div>{props.character.origin.name}</div>
         </div>
     )
 }

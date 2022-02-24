@@ -2,17 +2,21 @@
     display: grid;
     grid-template-rows: 5% 90%;
 }
-.gallarySearchBar{
+.gallerySearchBar{
     grid-row: 1 / 1;
     width: min-content;
     align-items: center;
+    justify-items: center;
 }
-.gallarySearchInput {
+/*
+.gallerySearchInput {
     align-self: center;
+    justify-self: center;
 }
+*/
 
 
-.gallary{
+.gallery{
     grid-row: 2 / 2;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
