@@ -14,6 +14,6 @@ export interface Head {
 }
 
 export interface Response{
-    info: Array<Head>
+    info: Array<Head>;
     results: Array<Character>;
 }

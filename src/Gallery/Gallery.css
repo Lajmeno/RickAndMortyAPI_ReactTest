@@ -1,20 +1,12 @@
 .galleryMain{
     display: grid;
-    grid-template-rows: 5% 90%;
+    grid-template-rows: 10% 90%;
+    min-height: 200px;
 }
 .gallerySearchBar{
     grid-row: 1 / 1;
-    width: min-content;
-    align-items: center;
-    justify-items: center;
+    min-height: 30px;
 }
-/*
-.gallerySearchInput {
-    align-self: center;
-    justify-self: center;
-}
-*/
-
 
 .gallery{
     grid-row: 2 / 2;
