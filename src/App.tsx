@@ -1,21 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import GalleryItem from './GaleryItem/GalleryItem';
-import Gallery from './Gallery/Gallery';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import CharacterDetail from './CharacterDetail';
+import {  Link, Outlet} from 'react-router-dom';
+
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="gallery" element ={<Gallery/>}/>
-        <Route path="gallery/:id" element ={<CharacterDetail/>}/>
-        <Route/>
-      </Routes>
-    </BrowserRouter>
-  
+    <div className='section'>
+        <div className='navbar is-fixed-top'><Link to="gallery" >Gallery</Link></div>
+        <div><Outlet /></div>
+        <div className='footer'>Footer</div>
+    </div>
+    
   );
 }
 

@@ -34,17 +34,17 @@ export default function Gallery(){
     };
 
     return(
-        <div className="galleryMain">
-            <div className="gallerysSearchBar">
-                <input data-testid ="gallery-search-input" className="gallerySearchInput" placeholder="Search Character" value={searchItem} onChange ={v => setSearchItem(v.target.value)}></input>
+        <div className="section">
+            <div className="section ">
+                <input data-testid ="gallery-search-input" className="input" placeholder="Search Character" value={searchItem} onChange ={v => setSearchItem(v.target.value)}></input>
                 <button /*onClick={() => page > 1 ? setPage(page - 1): 1}*/ onClick={() =>setPage(page-1)}>prev</button>
                 <button /*onClick={() => page < 42 ? setPage(page +1) : 42}*/ onClick={() =>setPage(page+1)}>next</button>
             </div>
-            <div className= "gallery" >
+            <div className= "columns is-multiline is-mobile" >
                 {    
                 items
                 .filter(ele => ele.name.toLowerCase().includes(searchItem.toLowerCase()))
-                .map((character, index) => <div data-testid= "all-items" key={character.id}><GalleryItem  character={character}/></div>)
+                .map((character, index) => <div className="column is-one-third" data-testid= "all-items" key={character.id}><GalleryItem  character={character}/></div>)
                 }
             </div>
             <div style={{backgroundColor: "lightblue"}}>

@@ -10,11 +10,14 @@ interface GalleryItemProps {
 
 export default function GalleryItem(props: GalleryItemProps){
     return (
-        <div data-testid="gallery-test-item" className="item">
-            <Link to={`${props.character.id}`} ><img data-testid="gallery-test-item-img" className="item-img" src={props.character.image} alt="character-image" /> </Link>
-            <div data-testid="gallery-item-name" >{props.character.name}</div>
-            <p>{props.character.species}</p>
-            <div>{props.character.origin.name}</div>
+        <div data-testid="gallery-test-item" className="card">
+            <Link to={`${props.character.id}`} ><img data-testid="gallery-test-item-img" className="card-image" src={props.character.image} alt="character-image" /> </Link>
+            <div className="card-content">
+                <div data-testid="gallery-item-name" className="title is-4" >{props.character.name}</div>
+                <div className="subtitle is-6" >{props.character.species}</div>
+                <div className="subtitle is-6">{props.character.origin.name}</div>
+            </div>
+            
         </div>
     )
 }
