@@ -19,7 +19,7 @@ export default function Gallery(){
 
     const fetchPage = (page:number) => {
         console.log("Fetch Beginn");
-        fetch(`https://rickandmortyapi.com/api/character${'?page=' + page}`)
+        fetch(`https://rickandmortyapi.com/api/character?page=${page}`)
         .then(response => {
             
             if(response.status === 200){

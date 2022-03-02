@@ -2,6 +2,7 @@ import { fireEvent, render, waitFor, screen } from "@testing-library/react";
 import Gallery from "./Gallery";
 
 
+
 test("that the Gallery contains only the searched items", async () => {
 
     const testItems = {
@@ -36,7 +37,7 @@ test("that the Gallery contains only the searched items", async () => {
         } as Response);
     });
 
-    render(<Gallery />);
+    render(<Gallery /> );
 
     await waitFor(() => {
         expect(screen.getAllByTestId("all-items").length).toBe(3);
@@ -50,9 +51,6 @@ test("that the Gallery contains only the searched items", async () => {
         expect(screen.getByTestId("all-items").textContent).toEqual("EddyHumanEarth");
         expect(screen.getAllByTestId("all-items").length).toBe(1);
     });
-    
-
-
 });
 
 
