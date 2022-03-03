@@ -12,11 +12,11 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="" element ={<App />}>
-          <Route path="gallery" element ={<Gallery/>}>
+        <Route path="/" element ={<App />}>
+          <Route path="/gallery" element ={<Gallery/>}>
             <Route path="*" element={< DummyPage />}/>
           </Route>
-          <Route path="gallery/:id" element ={<CharacterDetail/>}/>
+          <Route path="/gallery/:id" element ={<CharacterDetail/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
